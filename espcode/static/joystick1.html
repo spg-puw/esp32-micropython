@@ -1,0 +1,134 @@
+<html>
+
+<head>
+  <title>IOT Web Anwendung</title>
+</head>
+
+<body>
+  <style>
+    .maincanvas {
+      height: 100%;
+      background-color: rgb(255, 255, 186);
+    }
+  </style>
+  <div class="maincanvas">
+    <!-- HIER KOMMT DAS CANVAS REIN -->
+    <canvas id="mycanvas" style="width: 100%; height: 100%;"></canvas>
+  </div>
+
+  <!-- das ist das canvas skript -->
+  <script>
+    const canvas = document.querySelector("#mycanvas");
+    const ctx = canvas.getContext("2d");
+
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+
+    function randZeichnen() {
+      ctx.strokeStyle = "red";
+      ctx.beginPath();
+      ctx.moveTo(50, 50);
+      ctx.lineTo(50, 100);
+      ctx.stroke();
+      ctx.moveTo(50, 50);
+      ctx.lineTo(100, 50);
+      ctx.stroke();
+
+      ctx.moveTo(50, canvas.height - 50);
+      ctx.lineTo(50, canvas.height - 100);
+      ctx.stroke();
+      ctx.moveTo(50, canvas.height - 50);
+      ctx.lineTo(100, canvas.height - 50);
+      ctx.stroke();
+
+
+      ctx.moveTo(canvas.width - 50, canvas.height - 50);
+      ctx.lineTo(canvas.width - 50, canvas.height - 100);
+      ctx.stroke();
+      ctx.moveTo(canvas.width - 50, canvas.height - 50);
+      ctx.lineTo(canvas.width - 100, canvas.height - 50);
+      ctx.stroke();
+
+      ctx.moveTo(canvas.width - 50, 50);
+      ctx.lineTo(canvas.width - 50, 100);
+      ctx.stroke();
+      ctx.moveTo(canvas.width - 50, 50);
+      ctx.lineTo(canvas.width - 100, 50);
+      ctx.stroke();
+    }
+
+    function fadenkreuzZeichnen(xPosition, yPosition) {
+      //den ganzen canvas löschen
+      const ctx = canvas.getContext("2d");
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      // ctx.beginPath(); //achtung: ohne beginPath wird nichts gelöscht!
+
+      //horizontaler Strich
+      ctx.moveTo(xPosition - 50, yPosition);
+      ctx.lineTo(xPosition + 50, yPosition);
+      ctx.stroke();
+
+      //vertikaler Strich
+      ctx.moveTo(xPosition, yPosition - 50);
+      ctx.lineTo(xPosition, yPosition + 50);
+      ctx.stroke();
+    }
+
+    function fadenkreuzZeichnenProzent(xProzent, yProzent) {
+      const canvas = document.querySelector("#mycanvas");
+      var canvasHoehe = canvas.height;
+      var canvasBreite = canvas.width;
+
+      //limits festlegen
+      if (xProzent < 0) {
+        xProzent = 0;
+      }
+      else if (xProzent > 100) {
+        xProzent = 100;
+      }
+
+      if (yProzent < 0) {
+        yProzent = 0;
+      }
+      else if (yProzent > 100) {
+        yProzent = 100;
+      }
+
+      randZeichnen();
+      fadenkreuzZeichnen(xProzent * canvasBreite / 100, yProzent * canvasHoehe / 100);
+    }
+    // fadenkreuzZeichnenProzent(50,50);
+    // fadenkreuzZeichnen(200, 200);
+    // fadenkreuzZeichnen(300, 300);
+    // fadenkreuzZeichnen(500, 200);
+
+    function inputSimulieren() {
+      let x = 0;
+      setInterval(() => {
+        if (x > 100) {
+          return;
+        }
+        fadenkreuzZeichnenProzent(x, x);
+        x++;
+      }, 100);
+    }
+
+    function echterInput() {
+      setInterval(() => {
+        //hole daten aus dem Netz
+        fetch("/joystick")
+          .then(r => r.json()) //wandle den String in JSON um
+          .then(r => { //zeichnen mit den JSON-Daten
+            console.log(r);
+            fadenkreuzZeichnenProzent(r.x, r.y);
+          });
+      }, 2000);
+
+    }
+
+    // inputSimulieren();
+    echterInput();
+  </script>
+</body>
+
+</html>
