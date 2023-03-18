@@ -1,6 +1,6 @@
 from machine import Pin, PWM
 from time import sleep
-buzzer = PWM(Pin(25, Pin.OUT), freq=440, duty=512)
+buzzer = PWM(Pin(25, Pin.OUT), freq=0, duty=512)
 tones = {
     'c': 262,
     'd': 294,
