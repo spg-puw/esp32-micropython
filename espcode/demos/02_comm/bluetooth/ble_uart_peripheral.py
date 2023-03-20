@@ -31,7 +31,7 @@ _ADV_APPEARANCE_GENERIC_COMPUTER = const(128)
 
 
 class BLEUART:
-    def __init__(self, ble, name="mpy-uart", rxbuf=100):
+    def __init__(self, ble, name="your-device-name", rxbuf=100):
         self._ble = ble
         self._ble.active(True)
         self._ble.irq(self._irq)
@@ -89,7 +89,7 @@ class BLEUART:
         self._ble.gap_advertise(interval_us, adv_data=self._payload)
 
 
-def demo():
+def start_bluetooth_service():
     import time
 
     ble = bluetooth.BLE()
@@ -114,5 +114,5 @@ def demo():
 
 
 if __name__ == "__main__":
-    print("initing ble");
-    demo()
+    print("initing ble bluetooth service");
+    start_bluetooth_service()
