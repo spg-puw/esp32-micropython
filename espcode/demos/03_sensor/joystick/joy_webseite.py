@@ -1,7 +1,8 @@
 import picoweb
-import customnetwork
 import machine
 import time
+
+import customnetwork
 customnetwork.setupSTA()
 
 # 1) Beim ESP-Aufruf kommt die Webseite (HTML + JS Code)
