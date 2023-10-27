@@ -1,7 +1,7 @@
-from machine import Pin,Timer
+import machine
 import time
 
-led = Pin(2, Pin.OUT)
+led = machine.Pin(2, machine.Pin.OUT)
 
 while True:
     print("Schalte die interne LED ein")

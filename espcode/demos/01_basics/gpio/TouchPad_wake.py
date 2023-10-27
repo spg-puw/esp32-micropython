@@ -1,15 +1,14 @@
 import machine
 import time
-from machine import TouchPad, Pin
 import esp32
 
-print("start")
+print("start, please touch pin D14")
 
-t = TouchPad(Pin(14))
-t.config(500) # Schwellwert (threshold) einstellen
+touchPin = machine.TouchPad(machine.Pin(14))
+touchPin.config(500) # Schwellwert (threshold) einstellen
 
 print("before wake") # Achtung: der Ausgabepuffer wird eventuell nicht vollständig geleert!
-# time.sleep(0.1)
+# time.sleep(0.1) # kurz warten, damit der Ausgabepuffer geleert wird
 
 esp32.wake_on_touch(True)
 machine.lightsleep()
