@@ -8,10 +8,12 @@ gelesenerWert = 0
 toggleState = False # Status der LED
 schalterWurdeBereitsUmgeschaltet = False
 
+print("Bitte Pin D14 beruehren")
+
 while True:
     gelesenerWert = touchPin1.read()
-    print(gelesenerWert)
-    if gelesenerWert < 100:
+    # print("Wert am Pin {0}".format(gelesenerWert))
+    if gelesenerWert < 300:
         print("TouchPad berührung gemessen ({zeitstempel})".format(zeitstempel = time.time_ns()))
         
         if schalterWurdeBereitsUmgeschaltet is False:
