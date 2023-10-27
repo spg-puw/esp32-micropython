@@ -1,5 +1,14 @@
 # MicoPython Firmware für den ESP32
 
+## Treiber für die serielle Schnittstelle
+
+Der Treiber für die serielle Schnittstelle (CP2102) findet sich [hier](./driver/):
+
+* [hier für Windows](./driver/CP210x_Universal_Windows_Driver.zip)
+* [hier für Mac OS](./driver/Mac_OSX_VCP_Driver.zip)
+
+Die Treiber sind auch auf der [offiziellen Webseite](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads) des Herstellers Silicon Labs zu finden.
+
 ## Vanilla Firmware
 
 Die Firmware für den ESP32 kann unter [https://micropython.org/download/esp32/](https://micropython.org/download/esp32/) heruntergeladen werden.
@@ -11,7 +20,7 @@ Die Dokumentation ist unter folgenden Links zu finden:
 
 ## Firmware mit ESP-NOW
 
-ESP-NOW ist ein Funkprotokoll von Espressif, welches auf 2.4 GHz operiert. Die |[Dokumentation](https://www.espressif.com/en/products/software/esp-now/overview) des Herstellers ist hier zu finden.
+ESP-NOW ist ein Funkprotokoll von Espressif, welches auf 2.4 GHz operiert. Die [Dokumentation](https://www.espressif.com/en/products/software/esp-now/overview) des Herstellers ist hier zu finden.
 
 In der Vanilla Firmware ist das Protokoll (noch) nicht implementiert, es wird daher ein vorkompiliertes Firmware-Image vom GitHub User `glenn20` empfohlen.
 
