@@ -1,6 +1,6 @@
 import picoweb
 import customnetwork
-customnetwork.setupSTA()
+customnetwork.start()
 
 class ExcWebApp(picoweb.WebApp):
     async def handle_exc(self, req, resp, exc):

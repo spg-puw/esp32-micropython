@@ -10,7 +10,7 @@
 import uasyncio
 import picoweb
 import customnetwork
-customnetwork.setupSTA()
+customnetwork.start()
 
 event_sinks = set()
 

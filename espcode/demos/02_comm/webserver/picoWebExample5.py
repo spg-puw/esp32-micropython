@@ -1,7 +1,7 @@
 import ubinascii
 import picoweb
 import customnetwork
-customnetwork.setupSTA()
+customnetwork.start()
 
 app = picoweb.WebApp(__name__)
 

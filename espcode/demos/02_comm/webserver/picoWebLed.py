@@ -1,7 +1,7 @@
 import picoweb
-import customnetwork
 import machine
-customnetwork.setupSTA()
+import customnetwork
+customnetwork.start()
 
 led = machine.Pin(2, machine.Pin.OUT)
 app = picoweb.WebApp(__name__)
@@ -25,4 +25,3 @@ def noLightFn(req, resp):
     yield from resp.awrite("nolight")
 
 app.run(debug=True, host = customnetwork.getIP(), port = 80)
-

@@ -5,7 +5,7 @@
 import ure as re
 import picoweb
 import customnetwork
-customnetwork.setupSTA()
+customnetwork.start()
 
 
 def index(req, resp):
