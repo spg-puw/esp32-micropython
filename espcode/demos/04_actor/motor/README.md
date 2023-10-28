@@ -8,6 +8,12 @@
 
 ## Driver
 
+Kopieren Sie folgende Dateien auf den ESP32:
+
+* `lib/Stepper.py`
+
+Online:
+
 * https://github.com/zhcong/ULN2003-for-ESP32
 * https://github.com/zhcong/ULN2003-for-ESP32/blob/master/Stepper.py
 
