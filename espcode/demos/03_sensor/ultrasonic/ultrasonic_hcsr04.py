@@ -8,6 +8,7 @@ Gnd        GND
 
 Anmerkung: bitte 5V (Vin-Pin bei USB) verwenden!
 '''
+
 from hcsr04 import HCSR04 # see lib/hcsr04.py
 import time
 
