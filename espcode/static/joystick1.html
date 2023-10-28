@@ -6,9 +6,10 @@
 
 <body>
   <style>
+    body { margin: 0px; }
     .maincanvas {
       height: 100%;
-      background-color: rgb(255, 255, 186);
+      background-color: rgb(255, 255, 200);
     }
   </style>
   <div class="maincanvas">
@@ -40,7 +41,6 @@
       ctx.moveTo(50, canvas.height - 50);
       ctx.lineTo(100, canvas.height - 50);
       ctx.stroke();
-
 
       ctx.moveTo(canvas.width - 50, canvas.height - 50);
       ctx.lineTo(canvas.width - 50, canvas.height - 100);
@@ -97,6 +97,7 @@
       randZeichnen();
       fadenkreuzZeichnen(xProzent * canvasBreite / 100, yProzent * canvasHoehe / 100);
     }
+    
     // fadenkreuzZeichnenProzent(50,50);
     // fadenkreuzZeichnen(200, 200);
     // fadenkreuzZeichnen(300, 300);
@@ -115,14 +116,13 @@
 
     function echterInput() {
       setInterval(() => {
-        //hole daten aus dem Netz
-        fetch("/joystick")
-          .then(r => r.json()) //wandle den String in JSON um
-          .then(r => { //zeichnen mit den JSON-Daten
+        fetch("/getJoystick") // hole daten aus dem Netz
+          .then(r => r.json()) // wandle den String in JSON um
+          .then(r => { // zeichnen mit den JSON-Daten
             console.log(r);
-            fadenkreuzZeichnenProzent(r.x, r.y);
+            fadenkreuzZeichnenProzent(r.x / 4095 * 100, r.y / 4095 * 100);
           });
-      }, 2000);
+      }, 1500);
 
     }
 
