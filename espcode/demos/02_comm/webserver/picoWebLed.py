@@ -1,6 +1,6 @@
 import picoweb
 import machine
-import customnetwork
+from customnetwork import customnetwork
 customnetwork.start()
 
 led = machine.Pin(2, machine.Pin.OUT)

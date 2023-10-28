@@ -4,7 +4,7 @@
 #
 import ure as re
 import picoweb
-import customnetwork
+from customnetwork import customnetwork
 customnetwork.start()
 
 

@@ -9,7 +9,7 @@
 #see: https://github.com/mdn/dom-examples/tree/master/server-sent-events
 import uasyncio
 import picoweb
-import customnetwork
+from customnetwork import customnetwork
 customnetwork.start()
 
 event_sinks = set()

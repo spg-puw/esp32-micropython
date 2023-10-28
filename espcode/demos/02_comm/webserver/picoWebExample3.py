@@ -1,6 +1,6 @@
 import picoweb
 import ure as re
-import customnetwork
+from customnetwork import customnetwork
 customnetwork.start()
 
 app = picoweb.WebApp(__name__)

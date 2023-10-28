@@ -1,5 +1,5 @@
 import picoweb
-import customnetwork
+from customnetwork import customnetwork
 customnetwork.start()
 
 class ExcWebApp(picoweb.WebApp):
