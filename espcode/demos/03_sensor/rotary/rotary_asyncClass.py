@@ -1,3 +1,22 @@
+'''
+Es werden 2 Stk. KY-040 benötigt!
+
+Verkableung KY-040 (Rotary Encoder)
+Encoder 1 ... ESP32
+CLK           D13
+DT            D14
+SW            (nicht verbunden, SW ... switch ... ist der Button)
++             3V3
+GND           GND
+
+Encoder 2 ... ESP32
+CLK           D18
+DT            D19
+SW            (nicht verbunden, SW ... switch ... ist der Button)
++             3V3
+GND           GND
+'''
+
 # example for MicroPython rotary encoder
 # - uasyncio implementation
 # - 2 independent rotary encoders
