@@ -1,3 +1,16 @@
+'''
+Verkabelung MFRC522 (RFID-Reader)
+MFRC522 ... ESP32
+VCC         3V3
+RST         D22
+GND         GND
+MISO        D19
+MOSI        D23
+SCK         D18
+NSS         D21
+IRQ         (nicht verbunden)
+'''
+
 import mfrc522
 from os import uname
 
