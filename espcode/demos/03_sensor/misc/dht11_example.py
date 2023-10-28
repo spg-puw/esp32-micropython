@@ -1,5 +1,5 @@
 '''
-Verkablung KY-015 - DHT11 Temperatur und Luftfeuchte
+Verkablung KY-015 - DHT11 (Temperatur und Luftfeuchte)
 DHT11 ............ ESP
 -                  GND
 + (mittlerer Pin)  3V3
