@@ -4,8 +4,8 @@ Diese Repository enthält Democode für den ESP32 zur Benutzung im InnoLab.
 
 ## Benötigte Software
 
-* [Thonny](https://thonny.org/)
-* Windows Treiber
+* [Thonny (IDE)](https://thonny.org/)
+* [USB-Treiber](./../firmware/driver/)
 
 ## Nützliche Links
 
