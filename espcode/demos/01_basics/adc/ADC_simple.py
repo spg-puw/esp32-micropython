@@ -1,5 +1,5 @@
+import machine
 import time
-from machine import Pin, ADC
 
 # On the ESP32, ADC functionality is available on pins 32-39 (ADC block 1) and pins 0, 2, 4, 12-15 and 25-27 (ADC block 2).
 # ADC block 2 is also used by WiFi and so attempting to read analog values from block 2 pins when WiFi is active will raise an exception.
@@ -18,8 +18,8 @@ from machine import Pin, ADC
 # ADC.WIDTH_12BIT = 12
 
 try:
-    analogPin1 = ADC(Pin(32))
-    analogPin1.atten(ADC.ATTN_11DB)
+    analogPin1 = machine.ADC(machine.Pin(32))
+    analogPin1.atten(machine.ADC.ATTN_11DB)
     while True:
         wert = analogPin1.read()
         print(wert)
