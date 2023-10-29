@@ -10,7 +10,8 @@
         [ "lcd_i2c/const.py", "github:brainelectronics/micropython-i2c-lcd/lcd_i2c/const.py" ],
         [ "lcd_i2c/lcd_i2c.py", "github:brainelectronics/micropython-i2c-lcd/lcd_i2c/lcd_i2c.py" ],
         [ "lcd_i2c/typing.py", "github:brainelectronics/micropython-i2c-lcd/lcd_i2c/typing.py" ],
-        [ "lcd_i2c/version.py", "github:brainelectronics/micropython-i2c-lcd/lcd_i2c/version.py" ]
+        [ "lcd_i2c/version.py", "github:brainelectronics/micropython-i2c-lcd/lcd_i2c/version.py" ],
+        [ "ubutton.py", "https://gitlab.com/WiLED-Project/ubutton/-/raw/master/ubutton.py" ],
 
         [ "../static/test.css.gz", "github:spg-puw/esp32-micropython/espcode/static/test.css.gz" ],
         [ "../static/joystick1.html", "github:spg-puw/esp32-micropython/espcode/static/joystick1.html" ],
@@ -82,6 +83,7 @@
         [ "../demos/01_basics/gpio/blink.py", "github:spg-puw/esp32-micropython/espcode/demos/01_basics/gpio/blink.py" ],
         [ "../demos/01_basics/gpio/blink_timer.py", "github:spg-puw/esp32-micropython/espcode/demos/01_basics/gpio/blink_timer.py" ],
         [ "../demos/01_basics/gpio/PushButton.py", "github:spg-puw/esp32-micropython/espcode/demos/01_basics/gpio/PushButton.py" ],
+        [ "../demos/01_basics/gpio/PushButton_uButton.py", "github:spg-puw/esp32-micropython/espcode/demos/01_basics/gpio/PushButton_uButton.py" ],
         [ "../demos/01_basics/gpio/TouchPad_Lichtschalter.py", "github:spg-puw/esp32-micropython/espcode/demos/01_basics/gpio/TouchPad_Lichtschalter.py" ],
         [ "../demos/01_basics/gpio/TouchPad_wake.py", "github:spg-puw/esp32-micropython/espcode/demos/01_basics/gpio/TouchPad_wake.py" ],
         [ "../demos/01_basics/gpio/PushButton_led.py", "github:spg-puw/esp32-micropython/espcode/demos/01_basics/gpio/PushButton_led.py" ],
