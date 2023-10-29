@@ -38,6 +38,7 @@ Aktoren:
 * Div. LEDs inkl. Vorwiderstand
 * Stepper Motor 28BYJ-48 mit Treiberboard und Treiberchip ULN2003
 * Servomotor SG90
+* LCD Display 16x02 (LCD1602) mit I2C-Board
 
 Kabel:
 
