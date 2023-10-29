@@ -1,0 +1,19 @@
+{
+    "urls": [
+        [
+            "templates/test.tpl",
+            "github:spg-puw/esp32-micropython/templates/test.tpl"
+        ]
+    ],
+    "deps": [
+        [
+            "pkg_resources",
+            "latest"
+        ],
+        [
+            "umqtt.simple",
+            "latest"
+        ]
+    ],
+    "version": "0.1"
+}
