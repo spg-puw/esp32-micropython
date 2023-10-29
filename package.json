@@ -6,6 +6,11 @@
         [ "lib/utemplate/compiled.py", "github:pfalcon/utemplate/utemplate/compiled.py" ],
         [ "lib/utemplate/recompile.py", "github:pfalcon/utemplate/utemplate/recompile.py" ],
         [ "lib/utemplate/source.py", "github:pfalcon/utemplate/utemplate/source.py" ],
+        [ "lcd_i2c/__init__.py", "github:brainelectronics/micropython-i2c-lcd/lcd_i2c/__init__.py" ],
+        [ "lcd_i2c/const.py", "github:brainelectronics/micropython-i2c-lcd/lcd_i2c/const.py" ],
+        [ "lcd_i2c/lcd_i2c.py", "github:brainelectronics/micropython-i2c-lcd/lcd_i2c/lcd_i2c.py" ],
+        [ "lcd_i2c/typing.py", "github:brainelectronics/micropython-i2c-lcd/lcd_i2c/typing.py" ],
+        [ "lcd_i2c/version.py", "github:brainelectronics/micropython-i2c-lcd/lcd_i2c/version.py" ]
 
         [ "../static/test.css.gz", "github:spg-puw/esp32-micropython/espcode/static/test.css.gz" ],
         [ "../static/joystick1.html", "github:spg-puw/esp32-micropython/espcode/static/joystick1.html" ],
@@ -65,6 +70,7 @@
         [ "../demos/04_actor/buzzer/PWM_melody_simple.py", "github:spg-puw/esp32-micropython/espcode/demos/04_actor/buzzer/PWM_melody_simple.py" ],
         [ "../demos/04_actor/buzzer/PWM_beep.py", "github:spg-puw/esp32-micropython/espcode/demos/04_actor/buzzer/PWM_beep.py" ],
         [ "../demos/04_actor/buzzer/PWM_melody_adv.py", "github:spg-puw/esp32-micropython/espcode/demos/04_actor/buzzer/PWM_melody_adv.py" ],
+        [ "../demos/04_actor/display/lcd_hd44780_example.py", "github:spg-puw/esp32-micropython/espcode/demos/04_actor/display/lcd_hd44780_example.py" ],
         [ "../demos/01_basics/file/file_demo.py", "github:spg-puw/esp32-micropython/espcode/demos/01_basics/file/file_demo.py" ],
         [ "../demos/01_basics/mip/mip_libInstall.py", "github:spg-puw/esp32-micropython/espcode/demos/01_basics/mip/mip_libInstall.py" ],
         [ "../demos/01_basics/adc/ADC_simple.py", "github:spg-puw/esp32-micropython/espcode/demos/01_basics/adc/ADC_simple.py" ],
