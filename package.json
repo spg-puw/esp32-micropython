@@ -50,6 +50,7 @@
         [ "../demos/02_comm/mqtt/mqtt_simpleSub.py", "github:spg-puw/esp32-micropython/espcode/demos/02_comm/mqtt/mqtt_simpleSub.py" ],
         [ "../demos/02_comm/espnow/espnow_sender.py", "github:spg-puw/esp32-micropython/espcode/demos/02_comm/espnow/espnow_sender.py" ],
         [ "../demos/02_comm/espnow/espnow_receiver.py", "github:spg-puw/esp32-micropython/espcode/demos/02_comm/espnow/espnow_receiver.py" ],
+        [ "../demos/02_comm/i2c/i2c_scan.py", "github:spg-puw/esp32-micropython/espcode/demos/02_comm/i2c/i2c_scan.py" ],
         [ "../demos/03_sensor/misc/dht11_example.py", "github:spg-puw/esp32-micropython/espcode/demos/03_sensor/misc/dht11_example.py" ],
         [ "../demos/03_sensor/misc/ds18b20_example.py", "github:spg-puw/esp32-micropython/espcode/demos/03_sensor/misc/ds18b20_example.py" ],
         [ "../demos/03_sensor/misc/mpu6050_example.py", "github:spg-puw/esp32-micropython/espcode/demos/03_sensor/misc/mpu6050_example.py" ],
