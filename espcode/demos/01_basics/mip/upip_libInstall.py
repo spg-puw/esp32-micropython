@@ -2,7 +2,7 @@ from customnetwork import customnetwork
 customnetwork.start()
 
 import mip
-mip.install('pkg_resources')
+mip.install("pkg_resources")
 mip.install("umqtt.simple")
 mip.install("github:pfalcon/picoweb/picoweb/__init__.py", target="lib/picoweb")
 mip.install("github:pfalcon/picoweb/picoweb/utils.py", target="lib/picoweb")
