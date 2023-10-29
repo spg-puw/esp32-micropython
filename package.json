@@ -2,7 +2,7 @@
     "urls": [
         [
             "templates/test.tpl",
-            "github:spg-puw/esp32-micropython/templates/test.tpl"
+            "github:spg-puw/esp32-micropython/espcode/templates/test.tpl"
         ]
     ],
     "deps": [
