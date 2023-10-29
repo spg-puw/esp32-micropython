@@ -24,6 +24,8 @@ def subCallback(topic, msg):
     elif msg == b"toggle":
         ledIntern.value(state)
         state = 1 - state
+    else:
+        print("unknown message")
 
 def main(server = "broker.hivemq.com"):
     c = MQTTClient("umqtt_client", server)
