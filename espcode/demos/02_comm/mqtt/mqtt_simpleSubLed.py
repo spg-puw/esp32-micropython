@@ -1,50 +1,42 @@
-from umqtt.simple import MQTTClient
-from machine import Pin
-import ubinascii
 import machine
-import micropython
+from umqtt.simple import MQTTClient
 
+from customnetwork import customnetwork
+customnetwork.start()
 
-# ESP8266 ESP-12 modules have blue, active-low LED on GPIO2, replace
-# with something else if needed.
-led = Pin(2, Pin.OUT, value=1)
+# publish test messages:
+# mosquitto_pub -h broker.hivemq.com -t iot_led -m 'toggle'
 
-# Default MQTT server to connect to
-SERVER = "192.168.1.35"
-CLIENT_ID = ubinascii.hexlify(machine.unique_id())
-TOPIC = b"led"
-
+ledIntern = machine.Pin(2, machine.Pin.OUT, value=1)
+topic = b"iot_led"
 
 state = 0
 
-
-def sub_cb(topic, msg):
+def subCallback(topic, msg):
     global state
     print((topic, msg))
     if msg == b"on":
-        led.value(0)
+        ledIntern.value(0)
         state = 1
     elif msg == b"off":
-        led.value(1)
+        ledIntern.value(1)
         state = 0
     elif msg == b"toggle":
-        # LED is inversed, so setting it to current state
-        # value will make it toggle
-        led.value(state)
+        ledIntern.value(state)
         state = 1 - state
 
-
-def main(server=SERVER):
-    c = MQTTClient(CLIENT_ID, server)
-    # Subscribed messages will be delivered to this callback
-    c.set_callback(sub_cb)
+def main(server = "broker.hivemq.com"):
+    c = MQTTClient("umqtt_client", server)
+    c.set_callback(subCallback)
     c.connect()
-    c.subscribe(TOPIC)
-    print("Connected to %s, subscribed to %s topic" % (server, TOPIC))
-
+    c.subscribe(topic)
+    print("Connected to {0}, subscribed to topic {1}".format(server, topic))
     try:
-        while 1:
+        while True:
             # micropython.mem_info()
             c.wait_msg()
     finally:
         c.disconnect()
+
+if __name__ == "__main__":
+    main()
