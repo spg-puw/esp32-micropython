@@ -7,7 +7,8 @@
 try:
     from customnetwork import customnetwork
     customnetwork.start()
+except Exception as e:
+    print("error in boot.py: {0}".format(e))
+finally:
     del customnetwork
     gc.collect()
-except:
-    print("error in boot.py")
