@@ -6,6 +6,7 @@ class customnetwork:
         # default credentials
         wifi_ssid = "esp32-iot"
         wifi_pass = "123456"
+        reconnects_max = 8
         
         # read from first line of files if found
         try:
@@ -17,7 +18,7 @@ class customnetwork:
             filePassword.close()
             wifi_ssid = ssid
             wifi_pass = password
-            if password == "":
+            if ssid == "" or password == "": # do not continue without entries
                 return
         except:
             pass
@@ -28,15 +29,20 @@ class customnetwork:
             macAddress = wlan.config("mac") #or machine.unique_id()
             host = "esp32-" + "".join("{:02x}".format(b) for b in macAddress[3:])
             wlan.config(dhcp_hostname = host)
+            wlan.config(reconnects = reconnects_max)
             wlan.connect(wifi_ssid, wifi_pass)
             #wlan.ifconfig(config=('192.168.0.101', '255.255.255.0', '192.168.1.1', '8.8.8.8')) # (ip, subnet_mask, gateway, DNS_server)
-            print("trying to connect to {0} as host {1}".format(wifi_ssid, host))
-            while not wlan.isconnected():
-                print("trying ... [{}]".format(time.time()))
+            print("[wlan] trying to connect to {0} as host {1}".format(wifi_ssid, host))
+            
+            reconnects_num = 0
+            while not wlan.isconnected() and reconnects_num < reconnects_max:
+                reconnects_num += 1
+                print("[wlan] trying ... [t = {}]".format(time.time()))
                 time.sleep(1)
-                #machine.idle()
+            if not wlan.isconnected():
+                raise Exception("wifi connection failed - too many reconnect attempts")
         else:
-            print("board already connected to {}".format(wlan.config("essid")))
+            print("[wlan] board already connected to {}".format(wlan.config("essid")))
             
         customnetwork.printNetworkInformation()
 
@@ -52,24 +58,24 @@ class customnetwork:
         wlan.config(essid = wifi_ssid, password = wifi_pass)
         
         while wlan.active() == False:
-            print("creating ap ... [{}]".format(time.time()))
+            print("[wlan] creating ap ... [{}]".format(time.time()))
             time.sleep(1)
             
-        print("ap created")
+        print("[wlan] ap created")
         customnetwork.printNetworkInformation()
 
     def printNetworkInformation(detail = False):
         import network
         wlan = network.WLAN()
         ni = wlan.ifconfig()
-        print("----- network information -----")
-        print("SSID: {0}".format(wlan.config("essid")))
-        print("IP: {0}".format(ni[0]))
+        print("[wlan] ----- network information -----")
+        print("[wlan] SSID: {0}".format(wlan.config("essid")))
+        print("[wlan] IP: {0}".format(ni[0]))
         if detail == True:
-            print("Subnetmask: {0}".format(ni[1]))
-            print("Gateway: {0}".format(ni[2]))
-            print("DNS: {0}".format(ni[3]))
-        print("-------------------------------")
+            print("[wlan] Subnetmask: {0}".format(ni[1]))
+            print("[wlan] Gateway: {0}".format(ni[2]))
+            print("[wlan] DNS: {0}".format(ni[3]))
+        print("[wlan] -------------------------------")
 
     def getIP():
         import network
