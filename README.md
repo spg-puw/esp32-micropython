@@ -26,6 +26,10 @@ Viele Beispiele können natürlich ohne Internetzugang des ESP benutzt werden - 
 
 Kopieren Sie den Code aus dem Setup-Skript `setupESP.py` und führen Sie diesen auf dem ESP32 aus. Das Setupprogramm fragt über die Shell einige Informationen ab, verbindet sich mit dem WLAN und installiert die Abhängigkeiten.
 
+## Setup des Raspberry Pi Pico W
+
+Der Raspberry Pi Pico W wird auch unterstützt und kann ebenfalls mit dem Setupskript (siehe [hier](setupDevice.py)) genutzt werden.
+
 ## Verbesserungsvorschläge und Mitarbeit
 
 Sie wollen Mitarbeiten und haben ...?
