@@ -19,7 +19,7 @@ Dieses Repository beinhaltet Democode für den ESP32 mit MicroPython. Anfängern
 
 Viele Beispiele können natürlich ohne Internetzugang des ESP benutzt werden - die Abhängigkeiten (v.a. Bibliotheken in `/lib/`) müssen dann selber installiert/kopiert werden.
 
-**Automatisches Setup**: Es gibt ein Setup-Skript (siehe [hier](setupESP.py)), welches
+**Automatisches Setup**: Es gibt ein Setup-Skript (siehe [hier](setupDevice.py)), welches
 
 1. den ESP32 mit dem WLAN verbindet (Zugangsdaten werden benötigt: SSID, Passwort)<br>Die Verbindung wird nach einem Neustart des ESP automatisch wieder hergestellt (siehe `boot.py`)
 2. die notwendigen Abhängigkeiten automatisch herunterlädt und auf dem ESP32 speichert
