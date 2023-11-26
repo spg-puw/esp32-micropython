@@ -52,9 +52,14 @@ def setupWifi():
     def setupSTA():
         import network
         import time
+        import sys
         
         # default credentials
-        wifi_ssid = "esp32-iot"
+        wifi_ssid = "micropython-iot"
+        if sys.platform == "esp32":
+            wifi_ssid = "esp32-iot"
+        elif sys.platform == "rp2":
+            wifi_ssid = "rp2-iot"
         wifi_pass = "123456"
         reconnects_max = 8
         
@@ -77,9 +82,17 @@ def setupWifi():
         if not wlan.isconnected():
             wlan.active(True)
             macAddress = wlan.config("mac") #or machine.unique_id()
-            host = "esp32-" + "".join("{:02x}".format(b) for b in macAddress[3:])
-            wlan.config(dhcp_hostname = host)
-            wlan.config(reconnects = reconnects_max)
+            host = "mp-" + "".join("{:02x}".format(b) for b in macAddress[3:])
+            if sys.platform == "esp32":
+                host = "esp32-" + "".join("{:02x}".format(b) for b in macAddress[3:])
+            elif sys.platform == "rp2":
+                host = "rp2-" + "".join("{:02x}".format(b) for b in macAddress[3:])
+            try:
+                wlan.config(hostname = host)
+                wlan.config(reconnects = reconnects_max)
+                wlan.config(dhcp_hostname = host)
+            except:
+                pass
             wlan.connect(wifi_ssid, wifi_pass)
             #wlan.ifconfig(config=('192.168.0.101', '255.255.255.0', '192.168.1.1', '8.8.8.8')) # (ip, subnet_mask, gateway, DNS_server)
             print("[wlan] trying to connect to {0} as host {1}".format(wifi_ssid, host))
@@ -119,6 +132,7 @@ def setupWifi():
         wlan = network.WLAN()
         ni = wlan.ifconfig()
         print("[wlan] ----- network information -----")
+        print("[wlan] Hostname: {0}".format(wlan.config("hostname")))
         print("[wlan] SSID: {0}".format(wlan.config("essid")))
         print("[wlan] IP: {0}".format(ni[0]))
         if detail == True:
@@ -158,6 +172,7 @@ try:
 except Exception as e:
     print("error in boot.py: {0}".format(e))
 finally:
+    import gc
     del customnetwork
     gc.collect()
 """)

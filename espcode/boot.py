@@ -10,5 +10,6 @@ try:
 except Exception as e:
     print("error in boot.py: {0}".format(e))
 finally:
+    import gc
     del customnetwork
     gc.collect()
