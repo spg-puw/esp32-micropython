@@ -1,8 +1,8 @@
 '''
 Verbindungen
-Buzzer (KY-006) ... ESP
--                   GND
-S                   D25
+Buzzer passiv (KY-006) ... ESP
+-                          GND
+S                          D25
 '''
 
 import machine

@@ -1,3 +1,10 @@
+'''
+Verbindungen
+Buzzer passiv (KY-006) ... ESP
+-                          GND
+S                          D25
+'''
+
 import machine
 import time
 
