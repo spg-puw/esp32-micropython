@@ -21,7 +21,14 @@ def angle2duty(angle):
     print(r)
     return r
 
-for i in range(6):
-    print("Position {i}".format(i=i))
-    servo1.duty(angle2duty(i*36))
-    time.sleep(1)
+if __name__=="__main__":
+    print("sweep")
+    for i in range(180+1):
+        servo1.duty(angle2duty(i))
+        time.sleep(0.1)
+
+    print("Positionen abfahren")
+    for i in range(6):
+        print("Position {i}".format(i=i))
+        servo1.duty(angle2duty(i*36))
+        time.sleep(2)
