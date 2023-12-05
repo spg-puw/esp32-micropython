@@ -69,6 +69,7 @@
         [ "../demos/04_actor/led/neopixel_ampel.py", "github:spg-puw/esp32-micropython/espcode/demos/04_actor/led/neopixel_ampel.py" ],
         [ "../demos/04_actor/servo/servo_simple.py", "github:spg-puw/esp32-micropython/espcode/demos/04_actor/servo/servo_simple.py" ],
         [ "../demos/04_actor/motor/stepper_demo.py", "github:spg-puw/esp32-micropython/espcode/demos/04_actor/motor/stepper_demo.py" ],
+        [ "../demos/04_actor/buzzer/buzzer_active.py", "github:spg-puw/esp32-micropython/espcode/demos/04_actor/buzzer/buzzer_active.py" ],
         [ "../demos/04_actor/buzzer/PWM_melody_simple.py", "github:spg-puw/esp32-micropython/espcode/demos/04_actor/buzzer/PWM_melody_simple.py" ],
         [ "../demos/04_actor/buzzer/PWM_beep.py", "github:spg-puw/esp32-micropython/espcode/demos/04_actor/buzzer/PWM_beep.py" ],
         [ "../demos/04_actor/buzzer/PWM_melody_adv.py", "github:spg-puw/esp32-micropython/espcode/demos/04_actor/buzzer/PWM_melody_adv.py" ],
