@@ -1,7 +1,7 @@
 import machine
 import time
 
-pushButtonBoot = machine.Pin(0, machine.Pin.IN)
+pushButtonBoot = machine.Pin(0, machine.Pin.IN, machine.Pin.PULL_UP)
 
 for i in range(10):
     # wert = pushButtonBoot() # 1 wenn nichts gedrückt beim BOOT-Button
