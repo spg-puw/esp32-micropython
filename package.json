@@ -6,31 +6,18 @@
         [ "utemplate/compiled.py", "github:pfalcon/utemplate/utemplate/compiled.py" ],
         [ "utemplate/recompile.py", "github:pfalcon/utemplate/utemplate/recompile.py" ],
         [ "utemplate/source.py", "github:pfalcon/utemplate/utemplate/source.py" ],
-        [ "lcd_i2c/__init__.py", "github:brainelectronics/micropython-i2c-lcd/lcd_i2c/__init__.py" ],
-        [ "lcd_i2c/const.py", "github:brainelectronics/micropython-i2c-lcd/lcd_i2c/const.py" ],
-        [ "lcd_i2c/lcd_i2c.py", "github:brainelectronics/micropython-i2c-lcd/lcd_i2c/lcd_i2c.py" ],
-        [ "lcd_i2c/typing.py", "github:brainelectronics/micropython-i2c-lcd/lcd_i2c/typing.py" ],
-        [ "lcd_i2c/version.py", "github:brainelectronics/micropython-i2c-lcd/lcd_i2c/version.py" ],
         [ "ubutton.py", "https://gitlab.com/WiLED-Project/ubutton/-/raw/master/ubutton.py" ],
 
-        [ "primitives/__init__.py", "github:peterhinch/micropython-async/v3/primitives/__init__.py" ],
-        [ "primitives/aadc.py", "github:peterhinch/micropython-async/v3/primitives/aadc.py" ],
-        [ "primitives/barrier.py", "github:peterhinch/micropython-async/v3/primitives/barrier.py" ],
-        [ "primitives/condition.py", "github:peterhinch/micropython-async/v3/primitives/condition.py" ],
-        [ "primitives/delay_ms.py", "github:peterhinch/micropython-async/v3/primitives/delay_ms.py" ],
-        [ "primitives/encoder.py", "github:peterhinch/micropython-async/v3/primitives/encoder.py" ],
-        [ "primitives/events.py", "github:peterhinch/micropython-async/v3/primitives/events.py" ],
-        [ "primitives/pushbutton.py", "github:peterhinch/micropython-async/v3/primitives/pushbutton.py" ],
-        [ "primitives/queue.py", "github:peterhinch/micropython-async/v3/primitives/queue.py" ],
-        [ "primitives/ringbuf_queue.py", "github:peterhinch/micropython-async/v3/primitives/ringbuf_queue.py" ],
-        [ "primitives/semaphore.py", "github:peterhinch/micropython-async/v3/primitives/semaphore.py" ],
-        [ "primitives/switch.py", "github:peterhinch/micropython-async/v3/primitives/switch.py" ],
-        [ "primitives/sw_array.py", "github:peterhinch/micropython-async/v3/primitives/sw_array.py" ],
-        [ "threadsafe/__init__.py", "github:peterhinch/micropython-async/v3/threadsafe/__init__.py" ],
-        [ "threadsafe/message.py", "github:peterhinch/micropython-async/v3/threadsafe/message.py" ],
-        [ "threadsafe/threadsafe_event.py", "github:peterhinch/micropython-async/v3/threadsafe/threadsafe_event.py" ],
-        [ "threadsafe/threadsafe_queue.py", "github:peterhinch/micropython-async/v3/threadsafe/threadsafe_queue.py" ],
-        [ "threadsafe/context.py", "github:peterhinch/micropython-async/v3/threadsafe/context.py" ],
+        [ "microdot/__init__.py", "github:miguelgrinberg/microdot/src/microdot/__init__.py" ],
+        [ "microdot/microdot.py", "github:miguelgrinberg/microdot/src/microdot/microdot.py" ],
+        [ "microdot/asgi.py", "github:miguelgrinberg/microdot/src/microdot/asgi.py" ],
+        [ "microdot/cors.py", "github:miguelgrinberg/microdot/src/microdot/cors.py" ],
+        [ "microdot/jinja.py", "github:miguelgrinberg/microdot/src/microdot/jinja.py" ],
+        [ "microdot/session.py", "github:miguelgrinberg/microdot/src/microdot/session.py" ],
+        [ "microdot/sse.py", "github:miguelgrinberg/microdot/src/microdot/sse.py" ],
+        [ "microdot/utemplate.py", "github:miguelgrinberg/microdot/src/microdot/utemplate.py" ],
+        [ "microdot/websocket.py", "github:miguelgrinberg/microdot/src/microdot/websocket.py" ],
+        [ "microdot/wsgi.py", "github:miguelgrinberg/microdot/src/microdot/wsgi.py" ],
 
         [ "../static/test.css.gz", "github:spg-puw/esp32-micropython/espcode/static/test.css.gz" ],
         [ "../static/joystick1.html", "github:spg-puw/esp32-micropython/espcode/static/joystick1.html" ],
@@ -130,9 +117,93 @@
             "latest"
         ],
         [
+            "datetime",
+            "latest"
+        ],
+        [
+            "time",
+            "latest"
+        ],
+        [
+            "itertools",
+            "latest"
+        ],
+        [
+            "base64",
+            "latest"
+        ],
+        [
+            "pyjwt",
+            "latest"
+        ],
+        [
+            "requests",
+            "latest"
+        ],
+        [
+            "html",
+            "latest"
+        ],
+        [
+            "aioespnow",
+            "latest"
+        ],
+        [
+            "aioble",
+            "latest"
+        ],
+        [
+            "aiorepl",
+            "latest"
+        ],
+        [
             "umqtt.simple",
             "latest"
+        ],
+        [
+            "umqtt.robust",
+            "latest"
+        ],
+        [
+            "lora",
+            "latest"
+        ],
+        [
+            "lora-sync",
+            "latest"
+        ],
+        [
+            "lora-async",
+            "latest"
+        ],
+        [
+            "lora-sx127x",
+            "latest"
+        ],
+        [
+            "lora-sx126x",
+            "latest"
+        ],
+        [
+            "nrf24l01",
+            "latest"
+        ],
+        [
+            "ssd1306",
+            "latest"
+        ],
+        [
+            "github:peterhinch/micropython-async/v3/primitives",
+            "HEAD"
+        ],
+        [
+            "github:peterhinch/micropython-async/v3/threadsafe",
+            "HEAD"
+        ],
+        [
+            "github:brainelectronics/micropython-i2c-lcd",
+            "HEAD"
         ]
     ],
-    "version": "0.2"
+    "version": "0.3"
 }
