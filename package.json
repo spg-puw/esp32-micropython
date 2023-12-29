@@ -109,6 +109,7 @@
         [ "../demos/01_basics/gpio/PushButton_Lichtschalter_debounced.py", "github:spg-puw/esp32-micropython/espcode/demos/01_basics/gpio/PushButton_Lichtschalter_debounced.py" ],
         [ "../demos/01_basics/gpio/blink.py", "github:spg-puw/esp32-micropython/espcode/demos/01_basics/gpio/blink.py" ],
         [ "../demos/01_basics/gpio/blink_timer.py", "github:spg-puw/esp32-micropython/espcode/demos/01_basics/gpio/blink_timer.py" ],
+        [ "../demos/01_basics/gpio/blink_emulation.py", "github:spg-puw/esp32-micropython/espcode/demos/01_basics/gpio/blink_emulation.py" ],
         [ "../demos/01_basics/gpio/PushButton.py", "github:spg-puw/esp32-micropython/espcode/demos/01_basics/gpio/PushButton.py" ],
         [ "../demos/01_basics/gpio/PushButton_uButton.py", "github:spg-puw/esp32-micropython/espcode/demos/01_basics/gpio/PushButton_uButton.py" ],
         [ "../demos/01_basics/gpio/TouchPad_Lichtschalter.py", "github:spg-puw/esp32-micropython/espcode/demos/01_basics/gpio/TouchPad_Lichtschalter.py" ],
