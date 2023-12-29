@@ -15,6 +15,7 @@
 
         [ "../static/test.css.gz", "github:spg-puw/esp32-micropython/espcode/static/test.css.gz" ],
         [ "../static/joystick1.html", "github:spg-puw/esp32-micropython/espcode/static/joystick1.html" ],
+        [ "../static/captivePortal.html", "github:spg-puw/esp32-micropython/espcode/static/captivePortal.html" ],
         [ "../static/test.css", "github:spg-puw/esp32-micropython/espcode/static/test.css" ],
         [ "../static/hello.txt", "github:spg-puw/esp32-micropython/espcode/static/hello.txt" ],
         [ "../lib/mfrc522_v2.py", "github:spg-puw/esp32-micropython/espcode/lib/mfrc522_v2.py" ],
@@ -42,6 +43,7 @@
         [ "../demos/02_comm/webserver/picoWebExample5.py", "github:spg-puw/esp32-micropython/espcode/demos/02_comm/webserver/picoWebExample5.py" ],
         [ "../demos/02_comm/webserver/picoWebExample1.py", "github:spg-puw/esp32-micropython/espcode/demos/02_comm/webserver/picoWebExample1.py" ],
         [ "../demos/02_comm/webrepl/webrepl.py", "github:spg-puw/esp32-micropython/espcode/demos/02_comm/webrepl/webrepl.py" ],
+        [ "../demos/02_comm/wifi/captivePortal.py", "github:spg-puw/esp32-micropython/espcode/demos/02_comm/wifi/captivePortal.py" ],
         [ "../demos/02_comm/bluetooth/ble_uart_peripheral.py", "github:spg-puw/esp32-micropython/espcode/demos/02_comm/bluetooth/ble_uart_peripheral.py" ],
         [ "../demos/02_comm/bluetooth/ble_advertising.py", "github:spg-puw/esp32-micropython/espcode/demos/02_comm/bluetooth/ble_advertising.py" ],
         [ "../demos/02_comm/bluetooth/ble_temperature.py", "github:spg-puw/esp32-micropython/espcode/demos/02_comm/bluetooth/ble_temperature.py" ],
