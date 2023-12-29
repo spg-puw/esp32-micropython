@@ -13,6 +13,25 @@
         [ "lcd_i2c/version.py", "github:brainelectronics/micropython-i2c-lcd/lcd_i2c/version.py" ],
         [ "ubutton.py", "https://gitlab.com/WiLED-Project/ubutton/-/raw/master/ubutton.py" ],
 
+        [ "primitives/__init__.py", "github:peterhinch/micropython-async/v3/primitives/__init__.py" ],
+        [ "primitives/aadc.py", "github:peterhinch/micropython-async/v3/primitives/aadc.py" ],
+        [ "primitives/barrier.py", "github:peterhinch/micropython-async/v3/primitives/barrier.py" ],
+        [ "primitives/condition.py", "github:peterhinch/micropython-async/v3/primitives/condition.py" ],
+        [ "primitives/delay_ms.py", "github:peterhinch/micropython-async/v3/primitives/delay_ms.py" ],
+        [ "primitives/encoder.py", "github:peterhinch/micropython-async/v3/primitives/encoder.py" ],
+        [ "primitives/events.py", "github:peterhinch/micropython-async/v3/primitives/events.py" ],
+        [ "primitives/pushbutton.py", "github:peterhinch/micropython-async/v3/primitives/pushbutton.py" ],
+        [ "primitives/queue.py", "github:peterhinch/micropython-async/v3/primitives/queue.py" ],
+        [ "primitives/ringbuf_queue.py", "github:peterhinch/micropython-async/v3/primitives/ringbuf_queue.py" ],
+        [ "primitives/semaphore.py", "github:peterhinch/micropython-async/v3/primitives/semaphore.py" ],
+        [ "primitives/switch.py", "github:peterhinch/micropython-async/v3/primitives/switch.py" ],
+        [ "primitives/sw_array.py", "github:peterhinch/micropython-async/v3/primitives/sw_array.py" ],
+        [ "threadsafe/__init__.py", "github:peterhinch/micropython-async/v3/threadsafe/__init__.py" ],
+        [ "threadsafe/message.py", "github:peterhinch/micropython-async/v3/threadsafe/message.py" ],
+        [ "threadsafe/threadsafe_event.py", "github:peterhinch/micropython-async/v3/threadsafe/threadsafe_event.py" ],
+        [ "threadsafe/threadsafe_queue.py", "github:peterhinch/micropython-async/v3/threadsafe/threadsafe_queue.py" ],
+        [ "threadsafe/context.py", "github:peterhinch/micropython-async/v3/threadsafe/context.py" ],
+
         [ "../static/test.css.gz", "github:spg-puw/esp32-micropython/espcode/static/test.css.gz" ],
         [ "../static/joystick1.html", "github:spg-puw/esp32-micropython/espcode/static/joystick1.html" ],
         [ "../static/captivePortal.html", "github:spg-puw/esp32-micropython/espcode/static/captivePortal.html" ],
@@ -81,6 +100,10 @@
         [ "../demos/01_basics/mip/mip_libInstall.py", "github:spg-puw/esp32-micropython/espcode/demos/01_basics/mip/mip_libInstall.py" ],
         [ "../demos/01_basics/adc/ADC_simple.py", "github:spg-puw/esp32-micropython/espcode/demos/01_basics/adc/ADC_simple.py" ],
         [ "../demos/01_basics/adc/ADC_timer.py", "github:spg-puw/esp32-micropython/espcode/demos/01_basics/adc/ADC_timer.py" ],
+        [ "../demos/01_basics/asyncio/aio_countdown.py", "github:spg-puw/esp32-micropython/espcode/demos/01_basics/asyncio/aio_countdown.py" ],
+        [ "../demos/01_basics/asyncio/aio_exceptions.py", "github:spg-puw/esp32-micropython/espcode/demos/01_basics/asyncio/aio_exceptions.py" ],
+        [ "../demos/01_basics/asyncio/aio_helloWorld.py", "github:spg-puw/esp32-micropython/espcode/demos/01_basics/asyncio/aio_helloWorld.py" ],
+        [ "../demos/01_basics/asyncio/aio_timeout_waitfor.py", "github:spg-puw/esp32-micropython/espcode/demos/01_basics/asyncio/aio_timeout_waitfor.py" ],
         [ "../demos/01_basics/gpio/PushButton_Lichtschalter_irq_debounced.py", "github:spg-puw/esp32-micropython/espcode/demos/01_basics/gpio/PushButton_Lichtschalter_irq_debounced.py" ],
         [ "../demos/01_basics/gpio/TouchPad.py", "github:spg-puw/esp32-micropython/espcode/demos/01_basics/gpio/TouchPad.py" ],
         [ "../demos/01_basics/gpio/PushButton_Lichtschalter_debounced.py", "github:spg-puw/esp32-micropython/espcode/demos/01_basics/gpio/PushButton_Lichtschalter_debounced.py" ],
@@ -108,5 +131,5 @@
             "latest"
         ]
     ],
-    "version": "0.1"
+    "version": "0.2"
 }
