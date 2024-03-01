@@ -24,3 +24,16 @@ siehe [hier](https://www.waveshare.com/wiki/Pico-ePaper-2.13) und [hier](https:/
 * monochromes Display
 * 250x122 Pixel Auflösung
 * SPI
+
+## Waveshare Pico LCD 2
+
+siehe [hier](https://www.waveshare.com/wiki/Pico-LCD-2) und [hier](https://files.waveshare.com/upload/5/5f/Pico-LCD-2_SchDoc.pdf)
+
+* Display 2"
+* 320px x 240px
+* 65k colors
+* SPI
+* [ST7789VW](https://files.waveshare.com/upload/a/ad/ST7789VW.pdf) Treiber
+* 4x user button
+
+**Achtung**: Der Framebuffer wurde reduziert, da zu viel Memory gebraucht wird!
