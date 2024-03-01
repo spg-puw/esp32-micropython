@@ -16,3 +16,11 @@ Die Bibliothek kann automatisch wie folgt installiert werden:
 import mip
 mip.install("github:brainelectronics/micropython-i2c-lcd")
 ```
+
+## Waveshare ePaper Display 2.13in (250x122)
+
+siehe [hier](https://www.waveshare.com/wiki/Pico-ePaper-2.13) und [hier](https://github.com/waveshareteam/Pico_ePaper_Code)
+
+* monochromes Display
+* 250x122 Pixel Auflösung
+* SPI
