@@ -83,7 +83,7 @@
         [ "../demos/04_actor/led/led_basic.py", "github:spg-puw/esp32-micropython/espcode/demos/04_actor/led/led_basic.py" ],
         [ "../demos/04_actor/led/led_signal.py", "github:spg-puw/esp32-micropython/espcode/demos/04_actor/led/led_signal.py" ],
         [ "../demos/04_actor/led/neopixel_ampel.py", "github:spg-puw/esp32-micropython/espcode/demos/04_actor/led/neopixel_ampel.py" ],
-        
+        [ "../demos/04_actor/led/neopixel_demo.py", "github:spg-puw/esp32-micropython/espcode/demos/04_actor/led/neopixel_demo.py" ],
         [ "../demos/04_actor/led/neopixel_test.py", "github:spg-puw/esp32-micropython/espcode/demos/04_actor/led/neopixel_test.py" ],
         [ "../demos/04_actor/servo/servo_simple.py", "github:spg-puw/esp32-micropython/espcode/demos/04_actor/servo/servo_simple.py" ],
         [ "../demos/04_actor/servo/servo_advanced.py", "github:spg-puw/esp32-micropython/espcode/demos/04_actor/servo/servo_advanced.py" ],
