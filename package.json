@@ -53,6 +53,7 @@
         [ "../demos/02_comm/webserver/web_http_get.py", "github:spg-puw/esp32-micropython/espcode/demos/02_comm/webserver/web_http_get.py" ],
         [ "../demos/02_comm/webserver/web_https_get2.py", "github:spg-puw/esp32-micropython/espcode/demos/02_comm/webserver/web_https_get2.py" ],
         [ "../demos/02_comm/webserver/web_https_get1.py", "github:spg-puw/esp32-micropython/espcode/demos/02_comm/webserver/web_https_get1.py" ],
+        [ "../demos/02_comm/webserver/web_https_post.py", "github:spg-puw/esp32-micropython/espcode/demos/02_comm/webserver/web_https_post.py" ],
         [ "../demos/02_comm/webserver/webserver_http.py", "github:spg-puw/esp32-micropython/espcode/demos/02_comm/webserver/webserver_http.py" ],
         [ "../demos/02_comm/webrepl/webrepl.py", "github:spg-puw/esp32-micropython/espcode/demos/02_comm/webrepl/webrepl.py" ],
         [ "../demos/02_comm/wifi/captivePortal.py", "github:spg-puw/esp32-micropython/espcode/demos/02_comm/wifi/captivePortal.py" ],
